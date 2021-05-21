@@ -3,6 +3,10 @@
 
 @model Salon.Models.Stylist
 
+<header>
+  @await Html.PartialAsync("StylistsHeader")
+</header>
+
 <div class="main">
   <h1>@Html.DisplayFor(model => model.Name)</h1>
 
@@ -34,3 +38,8 @@
     </ul>
   </div>
 </div>
+
+<footer>
+  @Html.ActionLink("Add a new client", "Create", "Clients")
+  @Html.ActionLink("Return to all stylists", "Index", "Stylists")
+</footer>

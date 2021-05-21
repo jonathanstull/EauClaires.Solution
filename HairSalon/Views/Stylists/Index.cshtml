@@ -1,6 +1,10 @@
 @using Salon.Models;
 @model List<Salon.Models.Stylist>;
 
+<header>
+  @Html.Partial("StylistsHeader")
+</header>
+
 <div class="main">
   <h1>Our Stylists</h1>
 
@@ -20,3 +24,8 @@
     </ul>
   }
 </div>
+
+<footer>
+  @Html.ActionLink("Add a new stylist", "Create", "Stylists")
+  @Html.ActionLink("Return home", "Index", "Home")
+</footer>
