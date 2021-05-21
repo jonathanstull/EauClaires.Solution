@@ -1,18 +1,40 @@
+@using Salon.Models;
+@using System.Reflection;
+
 @model Salon.Models.Stylist
 
 <div class="main">
   <h1>@Html.DisplayFor(model => model.Name)</h1>
 
-  <h3>Contact information</h3>
+  <h3>Contact Information</h3>
   <div class="contact">
     <p>@Html.DisplayNameFor(model => model.Address): @Html.DisplayFor(model => model.Address)</p>
-    <p>@Html.DisplayNameFor(model => model.Phone): @Html.DisplayFor(model => model.Address)</p>
-    <p></p>
-    <p></p>
-    <p></p>
+    <p>@Html.DisplayNameFor(model => model.Phone): @Html.DisplayFor(model => model.Phone)</p>
+    <p>@Html.DisplayNameFor(model => model.Email): @Html.DisplayFor(model => model.Email)</p>
   </div>
+
   <div class="contract-details">
-    <p></p>
-    <p></p>
+    <h3>Contract Information</h3>
+    <p>Start date: @Html.DisplayFor(model => model.StartDate)</p>
+    <p>Lease rate: $@Html.DisplayFor(model => model.LeaseRate)</p>
+  </div>
+
+  <div class="client-list">
+    <h3>Clients</h3>
+
+    @if (@Model.Clients.Count == 0)
+    {
+      <p>@Html.DisplayFor(model => model.Name) has no clients. @Html.ActionLink("Add a client", "Create", "Clients").</p>
+    }
+    
+    @if (@Model.Clients.Count != 0)
+    {
+      <ul>
+        @foreach (Client client in Model.Clients)
+        {
+          <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.Id })</li>
+        }
+      </ul>
+    }
   </div>
 </div>
