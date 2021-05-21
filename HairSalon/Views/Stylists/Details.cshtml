@@ -26,15 +26,11 @@
     {
       <p>@Html.DisplayFor(model => model.Name) has no clients. @Html.ActionLink("Add a client", "Create", "Clients").</p>
     }
-    
-    @if (@Model.Clients.Count != 0)
-    {
-      <ul>
-        @foreach (Client client in Model.Clients)
-        {
-          <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.Id })</li>
-        }
-      </ul>
-    }
+    <ul>
+      @foreach (Client client in Model.Clients)
+      {
+        <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.Id })</li>
+      }
+    </ul>
   </div>
 </div>

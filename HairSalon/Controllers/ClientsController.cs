@@ -32,7 +32,8 @@ namespace Salon.Controllers
     {
       _db.Clients.Add(client);
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.Id == client.StylistId);
+      return RedirectToAction("Details", "Stylists", thisStylist);
     }
 
     public ActionResult Details(int id)

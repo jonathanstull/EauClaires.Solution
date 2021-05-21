@@ -15,7 +15,9 @@
       @Html.TextBoxFor(model => model.Email)
     @Html.LabelFor(model => model.StartDate)
       @Html.TextBoxFor(model => model.StartDate)
+    @Html.LabelFor(model => model.Stylist)
+      @Html.DropDownList("StylistId")
 
-    <input type="submit" value="Add" />
+    <input type="submit" value="Add new client" />
   }
 </div>
