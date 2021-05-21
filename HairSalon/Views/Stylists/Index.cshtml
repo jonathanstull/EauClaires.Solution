@@ -1,0 +1,22 @@
+@using Salon.Models;
+@model List<Salon.Models.Stylist>;
+
+<div class="body">
+  <h1>Our Stylists</h1>
+
+  <p>This is a page that features each of our stylists with links to details pages. In future versions, this copy will be customized to reflect Eau Claire's branding standards.</p>
+  @if (@Model.Count == 0)
+  {
+    <p>There are no stylists at Eau Claire. Consider cultivating a less dramatic work environment or @Html.ActionLink("add a stylist", "Create", "Stylists").</p>
+  }
+  
+  @if (@Model.Count != 0)
+  {
+    <ul>
+      @foreach (Stylist stylist in Model)
+      {
+        <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.Id })</li>
+      }
+    </ul>
+  }
+</div>
