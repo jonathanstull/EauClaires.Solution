@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{FD10EAA6-86E6-428E-B63D-639676FFC09A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/ClientsController.cs">
+    <Files>
+      <File FileName="Controllers/ClientsController.cs" Line="35" Column="32" />
+      <File FileName="Controllers/StylistsController.cs" Line="30" Column="1" />
+      <File FileName="Program.cs" Line="17" Column="1" />
+      <File FileName="Views/Clients/Create.cshtml" Line="27" Column="7" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HairSalon" expanded="True">
+            <Node name="HairSalon" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="ClientsController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Clients" expanded="True" />
+                <Node name="Shared" expanded="True" />
+                <Node name="Stylists" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.HairSalon PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/jonathanstull/Desktop/Epicodus/Independent Projects/HairSalon.Solution/HairSalon/Controllers/StylistsController.cs" relfile="Controllers/StylistsController.cs" line="30" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

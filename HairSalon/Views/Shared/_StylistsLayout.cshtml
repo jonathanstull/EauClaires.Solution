@@ -3,18 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Eau Claire's Salon</title>
-    <link rel="stylesheet" type="text/css" href="~/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="">
+    <link rel="stylesheet" type="text/css" href="~/styles/global.css">
   </head>
 
-  <header>
-    @Html.Partial("StylistsHeader")
-  </header>
-
   <body>
-    @RenderBody()
-  </body>
+    <header>
+      @Html.Partial("StylistsHeader")
+    </header>
 
-  <footer>
-    @Html.Partial("StylistsFooter")
-  </footer>
+    <main>
+      @RenderBody()
+    </main>
+
+    <footer>
+      @Html.Partial("StylistsFooter")
+    </footer>
+  </body>
 </html>
